@@ -7,6 +7,8 @@
   "scripts": {
     "build": "tsc --noEmit && tsup",
     "start": "tsx ./src/main.ts",
+    "start": "node index.js",
+    "postinstall": "npx prisma generate && npx prisma migrate deploy"
     "start:prod": "node dist/main",
     "dev:server": "tsx watch ./src/main.ts",
     "test": "tsx watch ./test/all.test.ts",
